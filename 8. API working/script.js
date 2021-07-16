@@ -33,3 +33,6 @@ function clickEventHandler() {
 }
 
 btnGuess.addEventListener('click', clickEventHandler)
+
+// https://genderize.io/
+// https://nationalize.io/
