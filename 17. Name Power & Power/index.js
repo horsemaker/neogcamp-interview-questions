@@ -2,12 +2,14 @@
 
 var personOne = {
   name: 'Ram',
+  age: '25',
   power: 2500,
   yuga: 'Treta',
 }
 
 var personTwo = {
   name: 'Krishna',
+  age: '31',
   power: 2325,
   yuga: 'Dwapar',
 }
@@ -18,7 +20,7 @@ function checkPowers(personOne, personTwo) {
   namePowerPersonTwo = personTwo.name.length * 35
   // console.log(namePowerPersonTwo)
 
-  // Checking Name Power
+  // 17th -  Checking Name Power
   if (namePowerPersonOne > namePowerPersonTwo) {
     console.log(`${personOne.name} has more name power than ${personTwo.name}.`)
   } else if (namePowerPersonOne < namePowerPersonTwo) {
@@ -29,7 +31,7 @@ function checkPowers(personOne, personTwo) {
 
   console.log('---------------------------------------')
 
-  // Checking Power
+  // 16th - Checking Power
   if (personOne.power > personTwo.power) {
     console.log(`${personOne.name} has more power than ${personTwo.name}.`)
   } else if (personOne.power < personTwo.power) {
@@ -38,6 +40,7 @@ function checkPowers(personOne, personTwo) {
     console.log(`${personOne.name} & ${personTwo.name} have equal powers.`)
   }
 
+  // 17th - Checking Total Power
   totalPowerOne = namePowerPersonOne + personOne.power
   totalPowerTwo = namePowerPersonTwo + personTwo.power
 
@@ -56,4 +59,17 @@ function checkPowers(personOne, personTwo) {
   }
 }
 
+function checkAge(personOneName, personOneAge, personTwoName, personTwoAge) {
+  if (personOneAge > personTwoAge) {
+    console.log(`${personOneName} is older than ${personTwoName}.`)
+  } else if (personOneAge < personTwoAge) {
+    console.log(`${personTwoName} is older than ${personOneName}.`)
+  } else {
+    console.log(`${personOneName} & ${personTwoName} are of same age.`)
+  }
+}
+
+// 16th & 17th
 checkPowers(personOne, personTwo)
+// 15th
+checkAge(personOne.name, personOne.age, personTwo.name, personTwo.age)
