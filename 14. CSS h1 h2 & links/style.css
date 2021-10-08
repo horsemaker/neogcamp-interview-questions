@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+:root {
+  --primary-color: rgb(0, 255, 255);
+  --secondary-color: pink;
+}
+
+body {
+  font-family: 'Secular One', sans-serif;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+h2 {
+  color: var(--secondary-color);
+}
+
+#button__One {
+  background-color: var(--primary-color);
+  font-family: inherit;
+}
+
+#button__Two {
+  background-color: var(--secondary-color);
+  font-family: inherit;
+}
