@@ -5,14 +5,19 @@ var btnAPI = document.querySelector('#btnAPI')
 var serverURL = 'https://datausa.io/api/data'
 
 function callAPI() {
-  fetch(serverURL)
-    .then((response) => response.json())
-    .then((json) => {
-      var data = json.error
-      outputDivOne.textContent = data
-      outputDivOne.style.color = 'red'
-    })
-    .catch((error) => (outputDivTwo.textContent = error))
+  try {
+    fetch(serverURL)
+      .then((response) => response.json())
+      .then((json) => {
+        var data = json.error
+        outputDivOne.textContent = data
+        outputDivOne.style.color = 'red'
+      })
+  } catch (error) {
+    console.log("there's an error")
+    console.log(error)
+    outputDivTwo.textContent = error
+  }
 }
 
 btnAPI.addEventListener('click', callAPI)
