@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+
+:root {
+  --primary-color: white;
+  --secondary-color: #14b8a6;
+}
+
+button {
+  font-family: 'Noto Sans Mono', monospace;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
