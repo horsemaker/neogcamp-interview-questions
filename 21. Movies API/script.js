@@ -6,8 +6,9 @@
 // Eg - Clicking on the button YJHD will make a call to
 // https://mock-practice.prakhar10v.repl.co/bollywood?name=YJHD
 
-var btnYJHD = document.querySelector('#btn-yjhd')
-var btnZNMD = document.querySelector('#btn-znmd')
+// var btnYJHD = document.querySelector('#btn-yjhd')
+// var btnZNMD = document.querySelector('#btn-znmd')
+var buttonsDiv = document.querySelector('#buttons')
 var outputDiv = document.querySelector('#div-output')
 
 function callAPI(e) {
@@ -23,5 +24,6 @@ function callAPI(e) {
     })
 }
 
-btnYJHD.addEventListener('click', callAPI)
-btnZNMD.addEventListener('click', callAPI)
+// btnYJHD.addEventListener('click', callAPI)
+// btnZNMD.addEventListener('click', callAPI)
+buttonsDiv.addEventListener('click', callAPI)
