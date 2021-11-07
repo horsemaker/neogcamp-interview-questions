@@ -1,3 +1,5 @@
+// Create a web app where I can input a text. Now, create three buttons h1, h2, h3. When I click on any of the button, the text should become h1, h2, or h3.
+
 var h1 = document.querySelector('#h1')
 var h2 = document.querySelector('#h2')
 var h3 = document.querySelector('#h3')

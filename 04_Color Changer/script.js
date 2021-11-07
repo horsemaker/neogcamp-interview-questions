@@ -1,3 +1,5 @@
+// Create a web app where I can input a text. Now, create three buttons: red, green, blue. Clicking on the button should change the text color.
+
 var red = document.querySelector('#red')
 var green = document.querySelector('#green')
 var blue = document.querySelector('#blue')
