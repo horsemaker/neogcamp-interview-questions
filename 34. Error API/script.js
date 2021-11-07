@@ -6,7 +6,11 @@ var outputDiv = document.querySelector('#output')
 function fetchAPI() {
   console.log("called")
   fetch('https://randomsuser.me/api')
-    .then((res) => console.log(res.status))
+    .then((res) => res.json())
+    .then((json) => {
+      var error = json.error
+      outputDiv.textContent = error
+    })
     .catch((err) => {
       // console.log(err)
       outputDiv.innerText = err

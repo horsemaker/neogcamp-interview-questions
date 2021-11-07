@@ -4,7 +4,13 @@ var h3 = document.querySelector('#h3')
 
 function convertToH1() {
     var txt = document.querySelector('#txt-input')
-    txt.style.fontSize = '32px'
+    // txt.style.fontSize = '32px'
+    txt.style.display = 'block'
+    txt.style.fontSize = '2em'
+    txt.style.marginTop = '0.67em'
+    txt.style.marginBottom = '0.67em'
+    txt.style.fontWeight = 'bold'
+    txt.style.fon
 }
 
 function convertToH2() {

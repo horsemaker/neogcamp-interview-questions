@@ -7,15 +7,19 @@ var serverURL = 'https://datausa.io/api/data'
 function callAPI() {
   try {
     fetch(serverURL)
-      .then((response) => response.json())
+      .then((response) => {
+        // console.log(response)
+        response.json()
+      })
       .then((json) => {
+        // console.log(json)
         var data = json.error
         outputDivOne.textContent = data
         outputDivOne.style.color = 'red'
       })
   } catch (error) {
     console.log("there's an error")
-    console.log(error)
+    // console.log(error)
     outputDivTwo.textContent = error
   }
 }

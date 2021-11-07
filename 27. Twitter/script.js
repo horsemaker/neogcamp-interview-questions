@@ -8,6 +8,7 @@ var outputDiv = document.querySelector('#output')
 function counter() {
   // console.log('hey')
   var tweet = tweetField.value
+  btn.disabled = false
   // console.log(tweet)
   // console.log(tweet.length)
   var count = 30 - tweet.length
@@ -20,7 +21,6 @@ function counter() {
   else if (count > 0 && count <= 15) {
     charCount.style.color = 'yellow'
   }
-  btn.disabled = false
 }
 
 function tweetIt() {

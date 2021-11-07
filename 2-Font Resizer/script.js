@@ -10,7 +10,7 @@ function increaseFontSizeBy2px() {
 
 function decreaseFontSizeBy2px() {
     var txt = document.querySelector('#txt-input')
-    var style = window.getComputedStyle(txt, null).getPropertyValue('font-size')
+    var style = window.getComputedStyle(txt).getPropertyValue('font-size')
     currentSize = parseFloat(style)
     txt.style.fontSize = (currentSize - 2) + 'px'
   }
