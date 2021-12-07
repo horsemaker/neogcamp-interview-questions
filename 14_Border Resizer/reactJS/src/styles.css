@@ -1,0 +1,12 @@
+.App {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+button {
+  width: 20%;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: medium;
+  font-family: inherit;
+}

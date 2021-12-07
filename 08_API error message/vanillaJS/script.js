@@ -9,10 +9,10 @@ var serverURL = 'https://datausa.io/api/data'
 function callAPI() {
   try {
     fetch(serverURL)
-      .then((response) => {
+      .then((response) => 
         // console.log(response)
         response.json()
-      })
+      )
       .then((json) => {
         // console.log(json)
         var data = json.error
