@@ -4,32 +4,28 @@ var textField = document.querySelector('#text')
 var vowels = document.querySelector('#vowels')
 var consonants = document.querySelector('#consonants')
 
-var noVowels = 0
-var noConsonants = 0
+var v = 0
+var c = 0
 
-function countVowels() {
-  let inputText = textField.value
-
-  inputText.split('').forEach((letter) => {
-    console.log(letter)
-  })
-  // if (isNaN(textField.value)) {
-  //   var letter = textField.value.slice(-1).toLowerCase()
-  //   if (
-  //     letter === 'a' ||
-  //     letter === 'e' ||
-  //     letter === 'i' ||
-  //     letter === 'o' ||
-  //     letter === 'u'
-  //   ) {
-  //     noVowels++
-  //   } else {
-  //     noConsonants++
-  //   }
-  // }
-
-  // vowels.textContent = 'Vowels: ' + noVowels
-  // consonants.textContent = 'Consonants: ' + noConsonants
+function countVowels(txt) {
+  let text = textField.value
+  if (text !== "") {
+    for (var i = 0; i < text.length; i++) {
+      if (
+        text[i] === "a" ||
+        text[i] === "e" ||
+        text[i] === "i" ||
+        text[i] === "o" ||
+        text[i] === "u"
+      ) {
+        v++;
+      } else {
+        c++;
+      }
+    }
+  }
+  vowels.textContent = 'Vowels: ' + v
+  consonants.textContent = 'Consonants: ' + c
 }
 
 textField.addEventListener('input', countVowels)
