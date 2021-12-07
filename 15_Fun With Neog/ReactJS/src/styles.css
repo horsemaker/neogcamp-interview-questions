@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input,
+button {
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+div {
+  margin-top: 1rem;
+}

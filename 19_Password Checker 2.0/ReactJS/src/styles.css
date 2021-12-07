@@ -1,0 +1,13 @@
+.App {
+  font-family: sans-serif;
+}
+
+label,
+button {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+div {
+  margin-bottom: 2rem;
+}
