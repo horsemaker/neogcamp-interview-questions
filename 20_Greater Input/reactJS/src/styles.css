@@ -1,0 +1,10 @@
+.App {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,23 @@
+.App {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+  margin: auto;
+  padding: 1rem;
+}
+
+table {
+  width: 50%;
+}
+
+button {
+  margin: 1rem;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: medium;
+}
