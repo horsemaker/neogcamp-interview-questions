@@ -1,45 +1,61 @@
 import "./styles.css";
+import { useState } from "react";
 
-import React, { useState } from "react";
-var size = 12;
 export default function App() {
-  var myStyle = {
-    fontSize: size + "px"
-  };
-  const [input_text, set_input_text] = useState(myStyle);
-  const [text, set_text] = useState("");
-  const [output, set_output] = useState("");
-
-  function Increase_size() {
-    if (text !== "") {
-      size = size + 2;
-      myStyle = { fontSize: size + "px" };
-      set_input_text(myStyle);
-      set_output(text);
-    }
-  }
-
-  function Decrease_size() {
-    if (text !== "") {
-      size = size - 2;
-      myStyle = { fontSize: size + "px" };
-      set_input_text(myStyle);
-      set_output(text);
-    }
-  }
-
+  const [value, setValue] = useState("");
+  const [size, setSize] = useState(20);
   return (
     <div className="App">
-      <h1>Font Resizer</h1>
-      <textarea
-        rows="5"
-        cols="30"
-        placeholder="Enter something here..."
-        onChange={(event) => set_text(event.target.value)}
-      ></textarea>
-      <button onClick={() => Increase_size()}>+ Increase font size</button>
-      <button onClick={() => Decrease_size()}>- Decrease font size</button>
-      <div style={input_text}>{output}</div>
+      <h2>Enter Your Text 👇</h2>
+
+      <input
+        style={{
+          padding: "15px"
+        }}
+        placeholder="enter your text"
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+      />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          margin: "20px",
+          justifyContent: "center"
+        }}
+      >
+        <button
+          style={{
+            fontSize: "20px",
+            margin: "10px"
+          }}
+          onClick={() => {
+            setSize(size + 2);
+          }}
+        >
+          +
+        </button>
+        <button
+          style={{ margin: "10px", fontSize: "20px" }}
+          onClick={() => {
+            setSize(size - 2);
+          }}
+        >
+          -
+        </button>
+      </div>
+      <div
+        style={{
+          fontSize: size + "px",
+          padding: "15px",
+          backgroundColor: "lightgray",
+          
+        }}
+      >
+        {value}
+      </div>
     </div>
   );
 }
+
