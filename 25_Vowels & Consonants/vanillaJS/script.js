@@ -26,6 +26,8 @@ function countVowels(txt) {
   }
   vowels.textContent = 'Vowels: ' + v
   consonants.textContent = 'Consonants: ' + c
+  v=0;
+  c=0;
 }
 
 textField.addEventListener('input', countVowels)
