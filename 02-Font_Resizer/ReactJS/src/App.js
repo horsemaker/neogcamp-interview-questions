@@ -1,59 +1,46 @@
-import "./styles.css";
-import { useState } from "react";
+import { useState } from 'react';
 
-export default function App() {
-  const [value, setValue] = useState("");
-  const [size, setSize] = useState(20);
+function App() {
+  const [input, setInput] = useState('');
+  const [fontSize, setFontSize] = useState(16);
+
+  const handleOperations = (event) => {
+    let newFontSize;
+    switch (event.target.id) {
+      case 'increase':
+        newFontSize = fontSize + 2;
+        break;
+      case 'decrease':
+        newFontSize = fontSize - 2;
+        break;
+      default:
+        return;
+    }
+    setFontSize(newFontSize);
+  };
+
   return (
     <div className="App">
-      <h2>Enter Your Text 👇</h2>
-
-      <input
-        style={{
-          padding: "15px"
-        }}
-        placeholder="enter your text"
-        onChange={(e) => {
-          setValue(e.target.value);
-        }}
-      />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          margin: "20px",
-          justifyContent: "center"
-        }}
-      >
-        <button
-          style={{
-            fontSize: "20px",
-            margin: "10px"
-          }}
-          onClick={() => {
-            setSize(size + 2);
-          }}
-        >
-          +
-        </button>
-        <button
-          style={{ margin: "10px", fontSize: "20px" }}
-          onClick={() => {
-            setSize(size - 2);
-          }}
-        >
-          -
-        </button>
+      <h1>Font Resizer</h1>
+      <textarea
+        name="input-text"
+        id="input-text"
+        cols="30"
+        rows="10"
+        value={input}
+        onChange={(event) => setInput(event.target.value)}
+      ></textarea>
+      <br />
+      <div id="operations" onClick={handleOperations}>
+        <button id="increase">+ Increase Font Size</button>
+        <button id="decrease">- Decrease Font Size</button>
       </div>
-      <div
-        style={{
-          fontSize: size + "px",
-          padding: "15px",
-          backgroundColor: "lightgray"
-        }}
-      >
-        {value}
+      <br />
+      <div id="output" style={{ fontSize: `${fontSize}px` }}>
+        {input}
       </div>
     </div>
   );
 }
+
+export default App;
